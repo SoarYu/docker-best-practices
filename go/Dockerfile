@@ -15,7 +15,7 @@ COPY *.go ./
 RUN go mod download
 
 # 上一步完成了工具链：编译、链接...，开始编译构建程序的二进制可执行文件
-RUN sudo CGO_ENABLED=0 GOOS=linux go build -o /docker-gs-ping
+RUN CGO_ENABLED=0 GOOS=linux go build -o /docker-gs-ping
 
 # CMD tell Docker what command to execute when our image is used to start a container.
 # images 加载进 container 时需要执行的操作
