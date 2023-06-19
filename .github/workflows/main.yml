@@ -29,9 +29,9 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           # the build context
-          context: .  
+          context: ./go/docker-gs-ping/.
           # filepath to the Dockerfile.
-          file: ./go/docker-gs-ping/Dockerfile  
+          file: ./go/docker-gs-ping/Dockerfile
           # tells the action to upload the image to a registry after building it.
           push: true 
           # tags that specify where to push the image.

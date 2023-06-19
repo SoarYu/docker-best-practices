@@ -6,7 +6,7 @@ FROM golang:1.19
 WORKDIR /app
 
 # 将项目 modules files 复制进image中 /app/go.mod /app/go.sum
-COPY ./go.mod ./go.sum ./
+COPY go.mod go.sum ./
 
 # RUN 执行命令，下载项目引用的依赖
 RUN go mod download
