@@ -12,7 +12,7 @@ COPY ./go/docker-gs-ping/go.mod ./go/docker-gs-ping/go.sum ./
 RUN go mod download
 
 # 引入程序源码
-COPY *.go ./
+COPY ./go/docker-gs-ping/*.go ./
 
 # 上一步完成了工具链：编译、链接...，开始编译构建程序的二进制可执行文件
 RUN CGO_ENABLED=0 GOOS=linux go build -o /docker-gs-ping
